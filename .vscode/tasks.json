@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\alumne-DAM\\Documents\\Bapp:cleanapp",
+			"script": "app:clean",
+			"description": "Deletes the build directory.",
+			"group": "build",
+			"project": "app",
+			"buildFile": "C:\\Users\\alumne-DAM\\Documents\\B\\app\\build.gradle",
+			"rootProject": "B",
+			"projectFolder": "c:\\Users\\alumne-DAM\\Documents\\B",
+			"workspaceFolder": "c:\\Users\\alumne-DAM\\Documents\\B",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: app:clean"
+		},
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\alumne-DAM\\Documents\\Bapp:testapp",
+			"script": "app:test",
+			"description": "Runs the test suite.",
+			"group": "verification",
+			"project": "app",
+			"buildFile": "C:\\Users\\alumne-DAM\\Documents\\B\\app\\build.gradle",
+			"rootProject": "B",
+			"projectFolder": "c:\\Users\\alumne-DAM\\Documents\\B",
+			"workspaceFolder": "c:\\Users\\alumne-DAM\\Documents\\B",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: app:test"
+		}
+	]
+}
