@@ -8,9 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test 
-    void Test_registrar_usuari(){
+    void Test_registrar_usuario(){
         App classUnderTest = new App();
-        boolean resultat = App.registrar_usuario("marta","marta@gmail.com", 1);
+        boolean resultat = App.registrar_usuario("mart","mart@gmail.com", 3);
+        assertTrue(resultat);
+    }
+    @Test 
+    void Test_eliminar_usuario(){
+        App classUnderTest = new App();
+        boolean resultat = App.eliminar_usuario("mart","mart@gmail.com", 3);
         assertTrue(resultat);
     }
     

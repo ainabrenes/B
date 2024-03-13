@@ -8,7 +8,6 @@ import com.google.common.base.Strings;
 
 
 public class App {
-
     public static boolean registrar_usuario(String nombre, String correo, int id) {
         List<Usuario> usuarios = new ArrayList<>();
         for(int i=0;i<usuarios.size();i++){
@@ -20,5 +19,16 @@ public class App {
         Usuario newUser = new Usuario(nombre, correo,id);
         usuarios.add(newUser);
         return true;
+    }
+
+    public static boolean eliminar_usuario(String nombre,String correo, int id){
+        List<Usuario> usuarios = new ArrayList<>();
+        for (int i=0;i<usuarios.size();i++){
+            if(usuarios.get(i).getId()==(id)){
+                usuarios.remove(usuarios.get(i).getId());
+                return true;
+            }
+        }
+       return false;
     }
 }
