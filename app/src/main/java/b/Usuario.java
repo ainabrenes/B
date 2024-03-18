@@ -1,7 +1,7 @@
 package b;
 import java.util.*;
 public class Usuario {
-    public List<Usuario> usuarios = new ArrayList<>();
+   
    
     private int id;
     private String nombre;
