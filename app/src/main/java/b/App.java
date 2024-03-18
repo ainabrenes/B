@@ -9,12 +9,15 @@ import com.google.common.base.Strings;
 
 public class App {
     List<Usuario> usuarios= new ArrayList<>();
+    List<Libro> libros= new ArrayList<>();
+
 
     public List<Usuario> getUsuarios() {
         return usuarios;
     }
     public App() {
         this.usuarios =  new ArrayList<>();
+        this.libros =  new ArrayList<>();
     }
 
     public void registrar_usuario(String nombre, String correo, int id) {
@@ -26,20 +29,27 @@ public class App {
 
         Usuario usuarionuevo = new Usuario(nombre, correo, id);
         usuarios.add(usuarionuevo);
+
+    }
+    
+    public List<Libro> getLibros() {
+        return libros;
+    }
+    
+
+    public void añadir_libro(String titol,String autor,int id) {
+        for (int i = 0; i < libros.size(); i++) {
+            if (libros.get(i).getId() == (id)) {
+                return;
+            }
+        }
+
+        Libro nuevoLibro = new Libro(titol,autor, id);
+        libros.add(nuevoLibro);
+
     }
 
-    /*
-     * public static boolean eliminar_usuario(String nombre,String correo, int id){
-     * List<Usuario> usuarios = new ArrayList<>();
-     * for (int i=0;i<usuarios.size();i++){
-     * if(usuarios.get(i).getId()==(id)){
-     * usuarios.remove(usuarios.get(i).getId());
-     * return true;
-     * }
-     * }
-     * return false;
-     * }
-     */
+    
     
 
 }
