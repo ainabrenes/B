@@ -9,43 +9,45 @@ import com.google.common.base.Strings;
 
 public class App {
     List<Usuario> usuarios= new ArrayList<>();
-    List<Libro> libros= new ArrayList<>();
+    List<Habitacion> habitaciones= new ArrayList<>();
 
+    public App() {
+        this.usuarios =  new ArrayList<>();
+        this.habitaciones =  new ArrayList<>();
+    }
 
     public List<Usuario> getUsuarios() {
         return usuarios;
     }
-    public App() {
-        this.usuarios =  new ArrayList<>();
-        this.libros =  new ArrayList<>();
-    }
+    
 
     public void registrar_usuario(String nombre, String correo, int id) {
-        for (int i = 0; i < usuarios.size(); i++) {
+        /* for (int i = 0; i < usuarios.size(); i++) {
             if (usuarios.get(i).getId() == (id)) {
                 return;
             }
         }
-
+        */
         Usuario usuarionuevo = new Usuario(nombre, correo, id);
         usuarios.add(usuarionuevo);
 
     }
     
-    public List<Libro> getLibros() {
-        return libros;
+    public List<Habitacion> getHabitaciones() {
+        return habitaciones;
     }
     
 
-    public void añadir_libro(String titol,String autor,int id) {
-        for (int i = 0; i < libros.size(); i++) {
-            if (libros.get(i).getId() == (id)) {
+    public void añadir_habitacion(String tipus,int preu,int id) {
+        /*for (int i = 0; i < habitaciones.size(); i++) {
+            if (habitaciones.get(i).getId() == (id)) {
                 return;
             }
         }
+        */
 
-        Libro nuevoLibro = new Libro(titol,autor, id);
-        libros.add(nuevoLibro);
+        Habitacion nuevaHabitacion = new Habitacion(tipus,preu, id);
+        habitaciones.add(nuevaHabitacion);
 
     }
 
