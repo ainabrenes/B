@@ -18,6 +18,16 @@ class AppTest {
         assertArrayEquals(usuarios.toArray(), usuarios2.toArray());  // comparamos
     }
     @Test 
+    void Test_eliminar_usuario(){
+        App classUnderTest = new App();
+        List<Usuario> usuarios = classUnderTest.getUsuarios(); // vacia
+        classUnderTest.eliminar_usuario("marta", "marta@gmail.com", 1);
+        List<Usuario> usuarios2 = classUnderTest.getUsuarios(); // la lista tiene un usuario
+        usuarios.remove(new Usuario("marta","marta@gmail.com", 1)); // lo añadimos a la lista anterior
+        
+        assertArrayEquals(usuarios.toArray(), usuarios2.toArray());  // comparamos
+    }
+    @Test 
     void Test_registrar_habitaciones(){
         App classUnderTest = new App();
         List<Habitacion> habitaciones = classUnderTest.getHabitaciones(); // vacia

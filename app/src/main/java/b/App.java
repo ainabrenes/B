@@ -32,6 +32,12 @@ public class App {
         usuarios.add(usuarionuevo);
 
     }
+    public void eliminar_usuario(String nombre, String correo, int id) {
+        
+        Usuario usuarionuevo = new Usuario(nombre, correo, id);
+        usuarios.remove(usuarionuevo);
+
+    }
     
     public List<Habitacion> getHabitaciones() {
         return habitaciones;
