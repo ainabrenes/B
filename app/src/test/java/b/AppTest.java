@@ -37,13 +37,26 @@ class AppTest {
         
         assertArrayEquals(habitaciones.toArray(), habitaciones2.toArray());  // comparamos
     }
-    /*@Test 
-    void Test_eliminar_usuario(){
+    @Test 
+    void Test_eliminar_habitaciones(){
         App classUnderTest = new App();
-        boolean resultat = App.eliminar_usuario("mart","mart@gmail.com", 3);
-        assertTrue(resultat);
+        List<Habitacion> habitaciones = classUnderTest.getHabitaciones(); // vacia
+        classUnderTest.eliminar_habitacion("media",30, 1); // añadimos un usuario
+        List<Habitacion> habitaciones2 = classUnderTest.getHabitaciones(); // la lista tiene un usuario
+        habitaciones.remove(new Habitacion("media",30, 1)); // lo añadimos a la lista anterior
+        
+        assertArrayEquals(habitaciones.toArray(), habitaciones2.toArray());  // comparamos
     }
-    */
+    @Test 
+    void Test_listar_habita(){
+        App classUnderTest = new App();
+        List<Habitacion> habitaciones = classUnderTest.getHabitaciones(); // vacia
+        classUnderTest.eliminar_habitacion("media",30, 1); // añadimos un usuario
+        List<Habitacion> habitaciones2 = classUnderTest.getHabitaciones(); // la lista tiene un usuario
+        habitaciones.remove(new Habitacion("media",30, 1)); // lo añadimos a la lista anterior
+        
+        assertArrayEquals(habitaciones.toArray(), habitaciones2.toArray());  // comparamos
+    }
     
     
 

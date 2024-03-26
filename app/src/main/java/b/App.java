@@ -45,17 +45,26 @@ public class App {
     
 
     public void añadir_habitacion(String tipus,int preu,int id) {
-        /*for (int i = 0; i < habitaciones.size(); i++) {
-            if (habitaciones.get(i).getId() == (id)) {
-                return;
-            }
-        }
-        */
 
         Habitacion nuevaHabitacion = new Habitacion(tipus,preu, id);
         habitaciones.add(nuevaHabitacion);
 
     }
+    public void eliminar_habitacion(String tipus,int preu,int id) {
+        
+        Habitacion nuevaHabitacion = new Habitacion(tipus,preu, id);
+        habitaciones.remove(nuevaHabitacion);
+    }
+    public List<Habitacion> listar_habitacion() {
+        return habitaciones;
+                // for(int i=0;i<habitaciones.size();i++){
+                //    // return habitaciones.get(i);
+                //     return habitaciones;
+                // }        
+        
+    }
+    
+
 
     
     
