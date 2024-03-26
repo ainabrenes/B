@@ -48,7 +48,7 @@ class AppTest {
         assertArrayEquals(habitaciones.toArray(), habitaciones2.toArray());  // comparamos
     }
     @Test 
-    void Test_listar_habita(){
+    void Test_listar_habitaciones(){
         App classUnderTest = new App();
         List<Habitacion> habitaciones = classUnderTest.getHabitaciones(); // vacia
         classUnderTest.eliminar_habitacion("media",30, 1); // añadimos un usuario
